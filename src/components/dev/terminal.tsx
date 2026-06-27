@@ -70,7 +70,7 @@ export function Terminal({ onOutput, className = '' }: TerminalProps) {
       resizeObserver.observe(terminalRef.current);
     }
 
-    xterm.writeln('\x1b[1;32mOSAP Dev Terminal\x1b[0m');
+    xterm.writeln('\x1b[1;32mAnymind Dev Terminal\x1b[0m');
     xterm.writeln('Type commands here. Press Enter to execute.');
     xterm.writeln('');
 

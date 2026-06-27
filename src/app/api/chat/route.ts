@@ -109,7 +109,7 @@ export async function POST(request: NextRequest) {
       ? `\n\nAvailable tools you can use:\n${composioToolsList.slice(0, 10).map(t => `- ${t.name}: ${t.description}`).join('\n')}`
       : '';
 
-    const systemPrompt = `You are OSAP, a helpful AI assistant with access to tools.
+    const systemPrompt = `You are Anymind, a helpful AI assistant with access to tools.
 ${memoryContext ? `Relevant memories from user:\n${memoryContext}\n` : ''}
 When user asks to remember/store/save something, acknowledge and confirm.
 When appropriate, use available tools to help user.

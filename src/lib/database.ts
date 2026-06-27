@@ -61,7 +61,7 @@ export async function getOrCreateUser(email: string): Promise<DbUser> {
 
 // Get or create anonymous user by their anonymous ID
 export async function getOrCreateAnonymousUser(anonymousId: string): Promise<DbUser> {
-  const email = `anon_${anonymousId}@osap.app`;
+  const email = `anon_${anonymousId}@anymind.app`;
   
   const { data: existing } = await getSupabase()
     .from('users')
@@ -119,7 +119,7 @@ export async function getOrCreateClerkUser(clerkUserId: string, email?: string):
   // Need to create a new user - but we can't insert without a valid auth.uid() reference
   // Since Clerk manages auth, we create a "placeholder" user that can be linked
   // Use the service role key or create user without auth.users reference
-  const userEmail = email || `clerk_${clerkUserId}@osap.local`;
+  const userEmail = email || `clerk_${clerkUserId}@anymind.local`;
   
   // Insert with explicit id generation - we'll use a placeholder UUID
   // This allows the user record to exist even without Supabase Auth linking

@@ -268,7 +268,7 @@ export async function generateSynthesizedResponse(
 ): Promise<string> {
   if (!GLM_API_KEY) return 'Synthesis failed: API key missing';
 
-  const systemPrompt = `You are a high-quality, friendly AI agent (OSAP). 
+  const systemPrompt = `You are a high-quality, friendly AI agent (Anymind). 
 Your goal is to answer the user's question using the provided context and facts.
 
 RULES:

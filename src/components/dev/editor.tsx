@@ -21,7 +21,7 @@ interface CodeEditorProps {
   onFileSelect?: (file: FileNode) => void;
 }
 
-const defaultCode = `// Welcome to OSAP Dev Environment
+const defaultCode = `// Welcome to Anymind Dev Environment
 // Start coding here
 
 function greet(name: string): string {

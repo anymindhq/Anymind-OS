@@ -86,7 +86,7 @@ export async function POST(request: NextRequest) {
 
     if (action === 'create') {
       const agent = orchestrator.createAgent({
-        name: 'OSAP Autonomous Agent',
+        name: 'Anymind Autonomous Agent',
         capabilities: ['reasoning', 'planning', 'execution', 'learning', 'self-correction'],
         selfCorrect: true,
         learnFromMistakes: true,

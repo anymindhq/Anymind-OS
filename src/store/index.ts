@@ -26,7 +26,7 @@ export const useAppStore = create<AppState>()(
       setTheme: (theme) => set({ theme }),
     }),
     {
-      name: 'osap-storage',
+      name: 'anymind-storage',
       partialize: (state) => ({
         theme: state.theme,
         user: state.user

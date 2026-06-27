@@ -615,7 +615,7 @@ export class EmailSendTool implements BaseTool {
       return {
         success: true,
         data: {
-          message_id: `email-${Date.now()}@osap.ai`,
+          message_id: `email-${Date.now()}@anymind.ai`,
           to,
           subject,
           sent_at: new Date().toISOString(),
@@ -627,7 +627,7 @@ export class EmailSendTool implements BaseTool {
     return {
       success: true,
       data: {
-        message_id: `email-${Date.now()}@osap.ai`,
+        message_id: `email-${Date.now()}@anymind.ai`,
         to,
         subject,
         sent_at: new Date().toISOString(),

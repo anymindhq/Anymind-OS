@@ -17,7 +17,7 @@ function isHydraConfigured(): boolean {
 }
 
 function getSubTenantId(userId?: string): string {
-  return userId || process.env.NEXT_PUBLIC_HYDRA_DB_SUB_TENANT_ID || 'osap';
+  return userId || process.env.NEXT_PUBLIC_HYDRA_DB_SUB_TENANT_ID || 'anymind';
 }
 
 interface FirecrawlScrapeResult {

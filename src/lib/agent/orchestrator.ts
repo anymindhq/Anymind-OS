@@ -124,7 +124,7 @@ export interface Correction {
 
 const defaultAgentConfig: AgentConfig = {
   id: '',
-  name: 'OSAP Agent',
+  name: 'Anymind Agent',
   capabilities: ['reasoning', 'planning', 'execution', 'learning'],
   maxRetries: 3,
   timeoutMs: 300000,

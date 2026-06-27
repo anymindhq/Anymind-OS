@@ -32,7 +32,7 @@ export async function executeComposioToolCall(clerkUserId: string, toolCall: { n
   try {
     const router = getToolRouter();
     // Using Clerk ID as entityId for Composio session
-    const session = await router.getOrCreateSession(process.env.COMPOSIO_PROJECT_NAME || "osap-main", clerkUserId);
+    const session = await router.getOrCreateSession(process.env.COMPOSIO_PROJECT_NAME || "anymind-main", clerkUserId);
     
     // Normalization: Ensure name is lowercase for session execution
     const toolName = toolCall.name.toLowerCase();
@@ -94,7 +94,7 @@ export async function executeComposioToolCall(clerkUserId: string, toolCall: { n
  */
 export async function initiateComposioAuth(clerkUserId: string, toolkit: string) {
   const router = getToolRouter();
-  const session = await router.getOrCreateSession(process.env.COMPOSIO_PROJECT_NAME || "osap-main", clerkUserId);
+  const session = await router.getOrCreateSession(process.env.COMPOSIO_PROJECT_NAME || "anymind-main", clerkUserId);
   return await router.initiateAuth(session.id, toolkit);
 }
 
@@ -103,7 +103,7 @@ export async function initiateComposioAuth(clerkUserId: string, toolkit: string)
  */
 export async function searchTools(query: string, limit = 20, clerkUserId: string = "anonymous") {
   const router = getToolRouter();
-  const session = await router.getOrCreateSession(process.env.COMPOSIO_PROJECT_NAME || "osap-main", clerkUserId);
+  const session = await router.getOrCreateSession(process.env.COMPOSIO_PROJECT_NAME || "anymind-main", clerkUserId);
   
   let results = await router.searchTools(session.id, query);
   

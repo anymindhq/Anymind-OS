@@ -115,7 +115,7 @@ export default function HomePage() {
                 <div className="size-8 rounded-lg bg-primary/10 flex items-center justify-center">
                   <span className="text-sm font-bold text-primary">Z</span>
                 </div>
-                <span className="text-base font-semibold">OSAP</span>
+                <span className="text-base font-semibold">Anymind</span>
               </div>
               <div className="hidden sm:flex items-center gap-6">
                 <a href="#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
@@ -157,14 +157,14 @@ export default function HomePage() {
             <div className="w-full max-w-xl flex flex-col sm:flex-row items-center justify-center gap-4 mt-4">
               <div className="w-full sm:w-auto bg-card rounded-xl px-4 py-2.5 flex items-center justify-between gap-4 border border-border/50">
                 <code className="text-sm font-mono text-muted-foreground">
-bun install osap
+bun install anymind
                 </code>
                 <Button
                   size="sm"
                   variant="ghost"
                   onClick={async () => {
                     try {
-                      await navigator.clipboard.writeText('bun install osap');
+                      await navigator.clipboard.writeText('bun install anymind');
                       setCopied(true);
                       setTimeout(() => setCopied(false), 2000);
                     } catch (err) {
@@ -222,7 +222,7 @@ bun install osap
                 <div className="size-6 rounded-md bg-primary/10 flex items-center justify-center">
                   <span className="text-xs font-bold text-primary">Z</span>
                 </div>
-                <span className="text-sm font-semibold">OSAP</span>
+                <span className="text-sm font-semibold">Anymind</span>
               </div>
               <p className="text-xs text-muted-foreground">
                 Built for developers who demand more from their tools.

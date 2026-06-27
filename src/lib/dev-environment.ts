@@ -36,11 +36,11 @@ const defaultFiles: FileNode[] = [
         id: 'index.ts',
         name: 'index.ts',
         type: 'file',
-        content: `// Welcome to OSAP Dev Environment
+        content: `// Welcome to Anymind Dev Environment
 // Start building your project here
 
 export function main() {
-  console.log("Hello from OSAP!");
+  console.log("Hello from Anymind!");
 }
 
 main();
@@ -77,7 +77,7 @@ export function debounce<T extends (...args: any[]) => any>(
     name: 'package.json',
     type: 'file',
     content: JSON.stringify({
-      name: 'osap-project',
+      name: 'anymind-project',
       version: '1.0.0',
       scripts: {
         dev: 'ts-node src/index.ts',
@@ -92,9 +92,9 @@ export function debounce<T extends (...args: any[]) => any>(
     id: 'README.md',
     name: 'README.md',
     type: 'file',
-    content: `# My OSAP Project
+    content: `# My Anymind Project
 
-Built with OSAP Dev Environment.
+Built with Anymind Dev Environment.
 
 ## Getting Started
 
@@ -229,7 +229,7 @@ export function useApiCollections() {
   const [collections, setCollections] = useState<ApiCollection[]>([
     {
       id: 'default',
-      name: 'OSAP API',
+      name: 'Anymind API',
       requests: [
         { id: '1', name: 'List Tasks', method: 'GET', url: '/api/tasks', headers: {}, collection: 'default' },
         { id: '2', name: 'Create Task', method: 'POST', url: '/api/tasks', headers: { 'Content-Type': 'application/json' }, body: '{}', collection: 'default' },

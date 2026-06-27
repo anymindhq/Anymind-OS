@@ -15,12 +15,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "OSAP — Personal Agent OS",
+  title: "Anymind — Personal Agent OS",
   description: "Your AI-powered personal agent that executes tasks across apps with persistent memory.",
   keywords: ["agent", "AI", "automation", "personal assistant", "memory"],
-  authors: [{ name: "OSAP" }],
+  authors: [{ name: "Anymind" }],
   openGraph: {
-    title: "OSAP — Personal Agent OS",
+    title: "Anymind — Personal Agent OS",
     description: "Your AI-powered personal agent that executes tasks across apps with persistent memory.",
     type: "website",
   },

@@ -245,7 +245,7 @@ export class EmailTool implements BaseTool {
     const smtpPort = process.env.SMTP_PORT || '587';
     const smtpUser = process.env.SMTP_USER;
     const smtpPass = process.env.SMTP_PASS;
-    const fromEmail = process.env.SMTP_FROM || 'osap@agent.ai';
+    const fromEmail = process.env.SMTP_FROM || 'anymind@agent.ai';
 
     if (!smtpHost || !smtpUser || !smtpPass) {
       return { success: false, error: 'SMTP not configured' };
@@ -260,7 +260,7 @@ export class EmailTool implements BaseTool {
     return {
       success: true,
       data: {
-        message_id: `email-${Date.now()}@osap.ai`,
+        message_id: `email-${Date.now()}@anymind.ai`,
         to,
         subject,
         sent_at: new Date().toISOString(),

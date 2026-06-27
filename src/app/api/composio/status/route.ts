@@ -15,7 +15,7 @@ export async function GET() {
     const router = getToolRouter();
     
     // Create or get session for the user
-    const session = await router.getOrCreateSession("osap-main", internalUser.id);
+    const session = await router.getOrCreateSession("anymind-main", internalUser.id);
     
     // Fetch both global toolkits and session toolkits with individual error handling
     const [globalToolkits, sessionToolkits] = await Promise.all([

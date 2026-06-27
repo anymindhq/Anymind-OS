@@ -240,7 +240,7 @@ export default function ProfilePage() {
       <div className="flex items-center justify-between">
         <div className="space-y-1">
           <h1 className="text-3xl font-bold tracking-tight text-foreground">Profile</h1>
-          <p className="text-muted-foreground text-sm">Manage your OSAP account and integration preferences</p>
+          <p className="text-muted-foreground text-sm">Manage your Anymind account and integration preferences</p>
         </div>
         <div className="relative z-50">
           <UserButton />
@@ -258,7 +258,7 @@ export default function ProfilePage() {
           </Avatar>
           <div className="flex-1 text-center sm:text-left space-y-2">
             <div>
-              <h2 className="font-bold text-2xl text-foreground">{user?.fullName || 'OSAP User'}</h2>
+              <h2 className="font-bold text-2xl text-foreground">{user?.fullName || 'Anymind User'}</h2>
               <p className="text-sm text-muted-foreground font-medium">{user?.primaryEmailAddress?.emailAddress || 'No account email'}</p>
             </div>
             <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
@@ -375,7 +375,7 @@ export default function ProfilePage() {
           <Info className="size-6 shrink-0 text-primary/50" />
           <div className="space-y-1">
             <p className="leading-relaxed font-medium">
-              Toolkit integration allows your OSAP agent to securely perform cross-platform actions. 
+              Toolkit integration allows your Anymind agent to securely perform cross-platform actions. 
               <strong> All credentials are encrypted and stored solely within the Composio infrastructure.</strong>
             </p>
           </div>
@@ -441,10 +441,10 @@ export default function ProfilePage() {
           }}
         >
           <LogOut className="size-6 mr-3 group-hover:scale-110 transition-transform" />
-          Terminate OSAP Session
+          Terminate Anymind Session
         </Button>
         <p className="text-center text-[11px] text-muted-foreground mt-4 font-bold uppercase tracking-widest opacity-40">
-          Build 0.1.4-beta • Made with love at OSAP
+          Build 0.1.4-beta • Made with love at Anymind
         </p>
       </div>
     </div>

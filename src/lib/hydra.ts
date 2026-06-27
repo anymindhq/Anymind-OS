@@ -65,7 +65,7 @@ const HYDRA_TENANT_ID = process.env.NEXT_PUBLIC_HYDRA_DB_TENANT_ID;
 function getBaseParams(userId?: string) {
   return {
     tenant_id: HYDRA_TENANT_ID,
-    sub_tenant_id: userId || process.env.NEXT_PUBLIC_HYDRA_DB_SUB_TENANT_ID || 'osap',
+    sub_tenant_id: userId || process.env.NEXT_PUBLIC_HYDRA_DB_SUB_TENANT_ID || 'anymind',
   };
 }
 
@@ -99,7 +99,7 @@ export async function storeMemory(
           {
             text,
             infer: options?.infer ?? true,
-            title: options?.title || `Memory from OSAP`,
+            title: options?.title || `Memory from Anymind`,
             source_id: options?.taskId ? `task_${options.taskId}` : (options?.userId ? `user_${options.userId}` : undefined),
           },
         ],
@@ -174,7 +174,7 @@ export async function verifyProcessing(sourceIds: string[], userId?: string): Pr
     const params = new URLSearchParams();
     sourceIds.forEach(id => params.append('file_ids', id));
     params.append('tenant_id', HYDRA_TENANT_ID);
-    const subTenantId = userId || process.env.NEXT_PUBLIC_HYDRA_DB_SUB_TENANT_ID || 'osap';
+    const subTenantId = userId || process.env.NEXT_PUBLIC_HYDRA_DB_SUB_TENANT_ID || 'anymind';
     params.append('sub_tenant_id', subTenantId);
 
     const response = await fetch(`${HYDRA_API_URL}/ingestion/verify_processing?${params}`, {
@@ -353,7 +353,7 @@ export async function storeKnowledge(
       headers: getHeaders(),
       body: JSON.stringify({
         tenant_id: HYDRA_TENANT_ID,
-        sub_tenant_id: knowledge.userId || process.env.NEXT_PUBLIC_HYDRA_DB_SUB_TENANT_ID || 'osap',
+        sub_tenant_id: knowledge.userId || process.env.NEXT_PUBLIC_HYDRA_DB_SUB_TENANT_ID || 'anymind',
         upsert: true,
         app_sources: [
           {

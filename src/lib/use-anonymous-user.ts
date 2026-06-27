@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 
-const ANONYMOUS_ID_KEY = 'osap_anonymous_id';
+const ANONYMOUS_ID_KEY = 'anymind_anonymous_id';
 
 export function useAnonymousUser() {
   const [anonymousId, setAnonymousId] = useState<string | null>(null);

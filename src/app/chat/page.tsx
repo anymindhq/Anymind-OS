@@ -10,7 +10,7 @@ import type { ChatMessage, MessageStatus, ToolExecutionCard } from '@/types/chat
 import { useAuth } from '@/lib/use-auth';
 import { LoginModal } from '@/components/login-modal';
 
-const SESSION_STORAGE_KEY = 'osap_chat_history';
+const SESSION_STORAGE_KEY = 'anymind_chat_history';
 
 export default function ChatPage() {
   const { user, isLoaded } = useUser();
@@ -57,7 +57,7 @@ export default function ChatPage() {
       {
         id: `agent-welcome-${Date.now()}`,
         role: 'agent',
-        content: `Hey ${user?.firstName || 'there'} 👋 I'm your OSAP agent. I can fetch your emails, manage GitHub, search the web, remember things, and more. What would you like me to do?`,
+        content: `Hey ${user?.firstName || 'there'} 👋 I'm your Anymind agent. I can fetch your emails, manage GitHub, search the web, remember things, and more. What would you like me to do?`,
         status: 'done',
         timestamp: new Date().toISOString(),
       }

@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
     const router = getToolRouter();
     
     // Create or get session for the user
-    const session = await router.getOrCreateSession("osap-main", internalUser.id);
+    const session = await router.getOrCreateSession("anymind-main", internalUser.id);
     
     // Initiate authentication for the toolkit
     const authState = await router.initiateAuth(session.id, toolkit);
@@ -60,7 +60,7 @@ export async function GET(request: NextRequest) {
     const router = getToolRouter();
     
     // Create or get session for the user
-    const session = await router.getOrCreateSession("osap-main", internalUser.id);
+    const session = await router.getOrCreateSession("anymind-main", internalUser.id);
     
     // Initiate authentication for the toolkit
     const authState = await router.initiateAuth(session.id, toolkit);
@@ -114,7 +114,7 @@ export async function DELETE(request: NextRequest) {
     }
 
     // Fallback: list all connected accounts for session and remove those matching toolkit
-    const session = await router.getOrCreateSession("osap-main", internalUser.id);
+    const session = await router.getOrCreateSession("anymind-main", internalUser.id);
     const toolkits = await router.listToolkits(session.id);
     const toolkitInfo = toolkits.find((t: any) => t.slug === toolkit);
     

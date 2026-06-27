@@ -66,7 +66,7 @@ const defaultFiles: FileNode[] = [
         id: 'index.ts',
         name: 'index.ts',
         type: 'file',
-        content: `// OSAP Dev Environment
+        content: `// Anymind Dev Environment
 // Start coding here!
 
 export function greet(name: string): string {
@@ -107,7 +107,7 @@ export function formatDate(date: Date): string {
         content: `// Main application
 import { greet } from './index';
 
-const message = greet('OSAP');
+const message = greet('Anymind');
 console.log(message);
 `,
         language: 'typescript',
@@ -119,7 +119,7 @@ console.log(message);
     name: 'package.json',
     type: 'file',
     content: JSON.stringify({
-      name: 'osap-project',
+      name: 'anymind-project',
       version: '1.0.0',
       scripts: { dev: 'ts-node src/index.ts' },
     }, null, 2),
@@ -129,7 +129,7 @@ console.log(message);
     id: 'README.md',
     name: 'README.md',
     type: 'file',
-    content: '# OSAP Project\n\nBuilt with OSAP Dev Environment.',
+    content: '# Anymind Project\n\nBuilt with Anymind Dev Environment.',
     language: 'markdown',
   },
 ];
@@ -247,7 +247,7 @@ export default function DevPage() {
 
     // Write welcome message
     xterm.writeln('\x1b[1;32m╔════════════════════════════════════════╗\x1b[0m');
-    xterm.writeln('\x1b[1;32m║   OSAP Dev Terminal v1.0              ║\x1b[0m');
+    xterm.writeln('\x1b[1;32m║   Anymind Dev Terminal v1.0              ║\x1b[0m');
     xterm.writeln('\x1b[1;32m╚════════════════════════════════════════╝\x1b[0m');
     xterm.writeln('');
     xterm.writeln('Type \x1b[1;33mhelp\x1b[0m for available commands');
@@ -317,7 +317,7 @@ export default function DevPage() {
   }, []);
 
   const writePrompt = (xterm: XTerm) => {
-    xterm.write('\x1b[1;32mdeveloper@osap\x1b[0m:\x1b[1;34m~/workspace\x1b[0m$ ');
+    xterm.write('\x1b[1;32mdeveloper@anymind\x1b[0m:\x1b[1;34m~/workspace\x1b[0m$ ');
   };
 
   const clearLine = (xterm: XTerm) => {
@@ -737,7 +737,7 @@ export default function DevPage() {
                     <div>
                       <h3 className="font-semibold text-lg">Coming Soon</h3>
                       <p className="text-sm text-muted-foreground mt-1">
-                        The OSAP Agent-IDE is currently under construction. Native code editing and direct agent deployment is coming in our next major release.
+                        The Anymind Agent-IDE is currently under construction. Native code editing and direct agent deployment is coming in our next major release.
                       </p>
                     </div>
                   </div>
@@ -855,7 +855,7 @@ export default function DevPage() {
                   <div className="flex items-center gap-3">
                     <GitBranch className="size-5" />
                     <div>
-                      <h3 className="font-medium">osap-project</h3>
+                      <h3 className="font-medium">anymind-project</h3>
                       <div className="flex items-center gap-2 mt-0.5">
                         <span className="text-xs text-muted-foreground">branch:</span>
                         <Input

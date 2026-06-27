@@ -75,7 +75,7 @@ export function ChatInput({ onSend, onStop, isThinking, disabled }: ChatInputPro
                 value={value}
                 onChange={(e) => setValue(e.target.value.slice(0, maxChars))}
                 onKeyDown={handleKeyDown}
-                placeholder="Message OSAP..."
+                placeholder="Message Anymind..."
                 disabled={disabled}
                 rows={1}
                 className="flex-1 bg-transparent border-0 outline-none resize-none text-sm py-1.5 leading-relaxed text-foreground placeholder:text-muted-foreground min-h-[36px] max-h-[150px] custom-scrollbar selection:bg-primary/20"

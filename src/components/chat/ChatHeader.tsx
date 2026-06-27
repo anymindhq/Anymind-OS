@@ -32,7 +32,7 @@ export function ChatHeader({ isThinking, onClear, onNew }: ChatHeaderProps) {
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h2 className="text-sm font-bold tracking-tight">OSAP Agent</h2>
+              <h2 className="text-sm font-bold tracking-tight">Anymind Agent</h2>
               {isThinking && (
                 <div className="flex gap-0.5 items-center">
                   <div className="size-1 bg-blue-500 rounded-full animate-bounce" />

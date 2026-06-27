@@ -61,8 +61,8 @@ export function GitPanel({ onClone, onCommit, onPush, onPull }: GitPanelProps) {
   const [repos] = useState<GitRepo[]>([
     {
       id: '1',
-      name: 'osap-app',
-      url: 'https://github.com/user/osap-app',
+      name: 'anymind-app',
+      url: 'https://github.com/user/anymind-app',
       branch: 'main',
       branches: ['main', 'develop', 'feature/new-ui'],
       status: 'synced',
